@@ -6,10 +6,9 @@ const PrivateRoute = ({ children, ...rest }) => {
   const { user } = useAuth();
 
   return (
-    <Route>
+    <Route
       {...rest}
-      render=
-      {({ location }) =>
+      render={({ location }) =>
         user.email ? (
           children
         ) : (
@@ -21,7 +20,7 @@ const PrivateRoute = ({ children, ...rest }) => {
           ></Redirect>
         )
       }
-    </Route>
+    />
   );
 };
 

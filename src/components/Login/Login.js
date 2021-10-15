@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useAuth from "../../hooks/useFirebase";
+
+import useFirebase from "../../hooks/useFirebase";
 import "./Login.css";
 
 const Login = () => {
-  const { signInUsingGoogle } = useAuth();
+  const { signInUsingGoogle } = useFirebase();
   //   console.log(signInUsingGoogle);
   const a = () => {
     console.log("fdgfggfh");
