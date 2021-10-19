@@ -1,29 +1,15 @@
 import React, { useState } from "react";
-
 import "./Login.css";
-
 import useFirebase from "../../../hooks/useFirebase";
 import { Link } from "react-router-dom";
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  sendEmailVerification,
-  signInWithEmailAndPassword,
-  updateProfile,
-} from "@firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import Button from "@restart/ui/esm/Button";
-import { Modal } from "react-bootstrap";
 
 const Login = ({ show, setShow }) => {
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
-  // const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(!show);
-  // const handleShow = () => setShow(true);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -32,16 +18,11 @@ const Login = ({ show, setShow }) => {
     setPassword(e.target.value);
   };
 
-  const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser).then((result) => {
-      console.log(result);
-    });
-  };
   const handleRegistration = (e) => {
     e.preventDefault();
     console.log(email, password);
     if (password.length < 6) {
-      setError("password 6 ta hote hobe");
+      setError("Please Enter 6 password.");
       return;
     } else {
       processLogin(email, password);
@@ -84,6 +65,7 @@ const Login = ({ show, setShow }) => {
           />
 
           <br />
+          <p>{error}</p>
           <Button
             type="submit"
             value="Submit"

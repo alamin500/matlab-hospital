@@ -58,17 +58,6 @@ const Register = () => {
       });
   };
 
-  const processLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        setError("");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  };
   return (
     <div className="register-form">
       <div>
