@@ -13,7 +13,9 @@ const Services = (props) => {
   return (
     <div className="container">
       <div className="row g-5">
-        <h1 className="service-h1">Our Services</h1>
+        <h1 className="service-h1 pt-5" style={{ textAlign: "center" }}>
+          Our Services
+        </h1>
         {services.map((service, i) =>
           home ? (
             i < 4 && <Service key={service.id} services={service}></Service>

@@ -1,7 +1,6 @@
 .doctor-img {
   width: 250px;
   height: 260px;
-  margin: 5px;
 }
 .doctor {
   display: flex;
@@ -16,4 +15,8 @@
 }
 .card-meet a {
   color: white;
+}
+.doctor-flex {
+  display: flex;
+  justify-content: center;
 }

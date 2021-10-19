@@ -1,12 +1,4 @@
 import React from "react";
-
-import doctor2 from "../../../images/Doctor/doctor2.jfif";
-import doctor3 from "../../../images/Doctor/doctor3.jfif";
-import doctor4 from "../../../images/Doctor/doctor4.jfif";
-import doctor5 from "../../../images/Doctor/doctor5.jfif";
-import doctor6 from "../../../images/Doctor/doctor6.jfif";
-import doctor7 from "../../../images/Doctor/doctor7.jfif";
-import doctor8 from "../../../images/Doctor/doctor8.jfif";
 import Doctor from "../Doctor/Doctor";
 
 const doctors = [
@@ -64,7 +56,9 @@ const Doctors = (props) => {
   return (
     <div className="container">
       <div className="row g-2">
-        <h1 style={{ textAlign: "left" }}>Doctors</h1>
+        <h1 className="pt-5" style={{ textAlign: "center" }}>
+          Doctors
+        </h1>
         {doctors.map((doctor, i) =>
           home ? (
             i < 4 && <Doctor key={doctor.name} doctor={doctor}></Doctor>

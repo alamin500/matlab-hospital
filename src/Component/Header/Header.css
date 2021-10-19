@@ -6,7 +6,9 @@
   margin-right: auto;
 }
 .nav-text span {
-  color: white;
+  color: aliceblue;
+  text-align: center;
+  padding-top: 20px;
 }
 .nav-text a:hover {
   background-color: black;
@@ -15,5 +17,15 @@
   padding: 0;
 }
 .nav-text {
-  margin-right: none !important;
+  margin-right: 0 !important;
+}
+.logout-btn {
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 20px 30px;
+  margin: 0;
+  margin-right: auto;
+  color: blue;
+  background-color: #212529;
+  border: 0;
 }

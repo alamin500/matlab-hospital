@@ -6,8 +6,7 @@ import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useFirebase();
-  const allContext = useFirebase();
-  console.log(allContext);
+  console.log(user);
 
   return (
     <div>
@@ -20,9 +19,14 @@ const Header = () => {
             <Link to="/doctor">Doctor</Link>
             <Link to="/about">About us</Link>
 
-            <Link to="/login">Login</Link>
-            <span>{user.displayName}</span>
-            {user?.email && <button onClick={logOut}> Log Out</button>}
+            {!user?.email && <Link to="/login">Login</Link>}
+            <span className="displayname">{user.displayName}</span>
+            {user?.email && (
+              <button className="logout-btn" onClick={logOut}>
+                {" "}
+                Log Out
+              </button>
+            )}
           </Nav>
         </Container>
       </Navbar>
