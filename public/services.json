@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "service": "Laboratory Analysis",
+      "img": "https://images.unsplash.com/photo-1582560486643-d51a9722b92d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3wxMDc5MjEzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Pharmacy"
+    },
+    {
+      "id": 2,
+      "service": "Pediatric Clinic",
+      "img": "https://images.unsplash.com/photo-1578496481449-cf2e845cc00c?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMDc5MjEzfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Pediatric"
+    },
+    {
+      "id": 3,
+      "service": "Laryngological Clinic",
+      "img": "https://images.unsplash.com/photo-1595541436696-9d1ed153a2ca?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTF8MTA3OTIxM3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Laryngological"
+    },
+    {
+      "id": 4,
+      "service": "Rehabilitation",
+      "img": "https://images.unsplash.com/photo-1561328399-f94d2ce78679?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mjl8MTA3OTIxM3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Rehabilitation"
+    },
+    {
+      "id": 5,
+      "service": "Gynaecological Clinics",
+      "img": "https://images.unsplash.com/photo-1576671495234-2aaa0156b50a?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MzJ8MTA3OTIxM3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Therapy"
+    },
+    {
+      "id": 6,
+      "service": "Ophthalmology Clinics",
+      "img": "https://images.unsplash.com/photo-1581595220057-eefa8c4add1b?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MzN8MTA3OTIxM3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Pharmacy"
+    },
+    {
+      "id": 7,
+      "service": "Cardiac Clinic",
+      "img": "https://images.unsplash.com/photo-1579154204601-01588f351e67?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Njl8MTA3OTIxM3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Cardiac"
+    },
+    {
+      "id": 8,
+      "service": "Outpatient Surgery",
+      "img": "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nzh8MTA3OTIxM3x8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "catagory": "Surgery"
+    }
+  ]

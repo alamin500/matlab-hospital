@@ -1,0 +1,19 @@
+.doctor-img {
+  width: 250px;
+  height: 260px;
+  margin: 5px;
+}
+.doctor {
+  display: flex;
+  justify-content: center;
+}
+.meet-link {
+  text-decoration: none;
+  color: aliceblue;
+}
+.card-meet {
+  background-color: #4485ee;
+}
+.card-meet a {
+  color: white;
+}

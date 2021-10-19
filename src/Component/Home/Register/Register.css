@@ -1,0 +1,10 @@
+.google-btn {
+  text-decoration: none;
+}
+.register-form {
+  display: flex;
+  justify-content: center;
+}
+.log-h4 {
+  margin: 20px;
+}

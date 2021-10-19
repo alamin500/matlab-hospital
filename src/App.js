@@ -1,50 +1,63 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import AuthProvider from "./components/Context/AuthProvider";
-import Header from "./components/Header/Header";
-import Inventory from "./components/Inventory/Inventory";
-import Login from "./components/Login/Login";
-import NotFound from "./components/NotFound/NotFound";
-import OrderReview from "./components/OrderReview/OrderReview";
-import PlaceOrder from "./components/PlaceOrder/PlaceOrder";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Register from "./components/Register/Register";
-import Shipping from "./components/Shipping/Shipping";
-import Shop from "./components/Shop/Shop";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Header from "./Component/Header/Header";
+import Home from "./Component/Home/Home/Home";
+import Login from "./Component/Login/Login/Login";
+
+import Services from "./Component/Home/Services/Services";
+import Doctors from "./Component/Home/Doctors/Doctors";
+import Register from "./Component/Home/Register/Register";
+
+import AuthProvider from "./Context/AuthProvider";
+import useAuth from "../src/hooks/useAuth";
+import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+import BuyNow from "./Component/Home/BuyNow/BuyNow";
+import Meet from "./Component/Home/Meet/Meet";
+import Error from "./Component/Home/Error/Error";
+import AboutUs from "./Component/Home/About us/AboutUs";
 function App() {
+  const user = useAuth();
+  console.log(user);
   return (
-    <div>
+    <div className="App">
       <AuthProvider>
         <Router>
           <Header></Header>
           <Switch>
             <Route exact path="/">
-              <Shop></Shop>
+              <Home></Home>
             </Route>
-            <Route path="/shop">
-              <Shop></Shop>
+            <Route path="/home">
+              <Home></Home>
             </Route>
-            <Route path="/review">
-              <OrderReview></OrderReview>
+            <Route path="/doctor">
+              <Doctors></Doctors>
             </Route>
-            <Route path="/inventory">
-              <Inventory></Inventory>
+            <Route path="/service">
+              <Services></Services>
             </Route>
-            <PrivateRoute path="/shipping">
-              <Shipping></Shipping>
-            </PrivateRoute>
-            <PrivateRoute path="/placeorder">
-              <PlaceOrder></PlaceOrder>
-            </PrivateRoute>
+
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="*">
-              <NotFound></NotFound>
+            <PrivateRoute path="/meet">
+              <Meet></Meet>
+            </PrivateRoute>
+            <PrivateRoute path="/buy">
+              <BuyNow></BuyNow>
+            </PrivateRoute>
+            <Route path="/about">
+              <AboutUs></AboutUs>
+            </Route>
+
+            <Route to="*">
+              <Error></Error>
             </Route>
           </Switch>
         </Router>

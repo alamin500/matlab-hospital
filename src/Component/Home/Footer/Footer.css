@@ -1,0 +1,29 @@
+.footer-container h2 {
+  color: white;
+}
+
+.footer-container {
+  background-color: black;
+  color: gray;
+  padding: 40px;
+}
+.footer-container li:hover {
+  color: white;
+}
+.line {
+  margin: 10px;
+  width: 95%;
+}
+.footer-container li {
+  list-style-type: none;
+}
+.footer-container ul {
+  padding: 0;
+}
+.footer-link {
+  text-decoration: none;
+  color: gray;
+}
+.footer-link:hover {
+  color: white;
+}

@@ -1,0 +1,18 @@
+/* .login-btn {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+} */
+/* .login-img {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+} */
+.login-form {
+  display: flex;
+
+  justify-content: center;
+}
+.log-h4 {
+  margin: 20px;
+}

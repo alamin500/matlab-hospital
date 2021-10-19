@@ -1,0 +1,21 @@
+.service-card img {
+  height: 150px;
+  width: 230px;
+}
+.service-card a {
+  text-decoration: none;
+}
+.service-card {
+  margin: 0;
+}
+.service-h5 {
+  margin: 0;
+}
+/* ------------------------------------- */
+.service-card:hover {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 25, 255, 0.8);
+}
+.card-img:hover {
+  transform: scale(1);
+}

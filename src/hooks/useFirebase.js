@@ -1,39 +1,56 @@
-import { useEffect, useState } from "react";
 import {
-  GoogleAuthProvider,
   getAuth,
   signInWithPopup,
-  onAuthStateChanged,
+  GoogleAuthProvider,
   signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
-import initializeAuthentication from "../Firebase/firebase.init";
+import { useState, useEffect } from "react";
+import initializeAuthentication from "../Component/Login/Firebase/firebase.init";
+
 initializeAuthentication();
+
 const useFirebase = () => {
-  const [user, serUser] = useState({});
-  const googleProvider = new GoogleAuthProvider();
+  const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
   const auth = getAuth();
 
-  const signInUsingGoogle = () => {
-    signInWithPopup(auth, googleProvider).then((result) => {
-      console.log(result.user, "tahjisdjf");
-    });
+  const googleSignIn = () => {
+    setIsLoading(true);
+    const googleProvider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        setUser(result.user);
+        console.log(result.user);
+      })
+      .finally(() => setIsLoading(false));
   };
-  const logOut = () => {
-    signOut(auth).then(() => {
-      serUser({});
-    });
-  };
+
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
-        serUser(user);
+        setUser(user);
+      } else {
+        setUser({});
       }
+      setIsLoading(false);
     });
-  });
+    return () => unsubscribed;
+  }, []);
+
+  const logOut = () => {
+    setIsLoading(true);
+    signOut(auth)
+      .then(() => {})
+      .finally(() => setIsLoading(false));
+  };
 
   return {
     user,
-    signInUsingGoogle,
+    isLoading,
+    googleSignIn,
     logOut,
   };
 };
