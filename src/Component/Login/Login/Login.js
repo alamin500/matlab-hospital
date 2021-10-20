@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import useFirebase from "../../../hooks/useFirebase";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import Button from "@restart/ui/esm/Button";
 
@@ -10,6 +10,8 @@ const Login = ({ show, setShow }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const location = useLocation();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -40,7 +42,15 @@ const Login = ({ show, setShow }) => {
         setError(error.message);
       });
   };
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
   const { googleSignIn } = useFirebase();
+  const handleGoogleLogin = () => {
+    googleSignIn().then((result) => {
+      history.push(redirect_uri);
+    });
+  };
+
   return (
     <div className="login-form">
       <div>
@@ -75,7 +85,7 @@ const Login = ({ show, setShow }) => {
           </Button>
           <br />
           <br />
-          <button className="btn w-100 btn-success" onClick={googleSignIn}>
+          <button className="btn w-100 btn-success" onClick={handleGoogleLogin}>
             Google Sign In
           </button>
           <br />

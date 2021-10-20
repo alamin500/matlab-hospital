@@ -54,7 +54,7 @@ const doctors = [
 const Doctors = (props) => {
   const { home = false } = props;
   return (
-    <div className="container">
+    <div className="container p-0">
       <div className="row g-2">
         <h1 className="pt-5" style={{ textAlign: "center" }}>
           Doctors

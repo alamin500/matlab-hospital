@@ -1,10 +1,12 @@
-.error-image {
-  background-image: url("../../../images/error.jpg"),
+.appoinment {
+  background-image: url("https://www.denver-locksmith.net/wp-content/uploads/2018/08/Appointment-CONFIRMED.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  height: 700px;
+  height: 1200px;
   width: 100%;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: white;
+  padding: 30px;
 }

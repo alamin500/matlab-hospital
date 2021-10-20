@@ -1,0 +1,9 @@
+.meet-section {
+  height: 600px;
+  background-color: green;
+}
+.meet-section h1 {
+  font-size: 120px;
+  padding: 100px;
+  color: white;
+}

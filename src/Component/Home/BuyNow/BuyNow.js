@@ -1,11 +1,7 @@
 import React from "react";
-
+import "./Buynow.css";
 const BuyNow = () => {
-  return (
-    <div>
-      <h1>Confirmed your order.</h1>
-    </div>
-  );
+  return <div className="appoinment"></div>;
 };
 
 export default BuyNow;

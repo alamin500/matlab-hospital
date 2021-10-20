@@ -1,28 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
 
 import "./Service.css";
 
 const Service = ({ services }) => {
-  const { user } = useAuth();
-  const { img, service, catagory } = services;
+  const { id, img, service, catagory } = services;
   return (
-    <div className="col-12 col-sm-6 col-lg-3 service-card">
-      {user?.email ? (
-        <Link to="/buy">
-          <img className="card-img" src={img} alt="" />
+    <div className="col-12 col-sm-6 col-lg-3 service-card d-flex justify-content-center align-items-center">
+      <div>
+        <Link to={`/book/${id}`}>
+          <div className="hover-img m-0">
+            <img className="card-img" src={img} alt="" />
+          </div>
           <h5 className="service-h5">{service}</h5>
         </Link>
-      ) : (
-        <Link to="/login">
-          <img className="card-img" src={img} alt="" />
-          <h5 className="service-h5">{service}</h5>
-        </Link>
-      )}
-      <p>
-        <small>In {catagory}</small>
-      </p>
+        <p>
+          <small>In {catagory}</small>
+        </p>
+      </div>
     </div>
   );
 };

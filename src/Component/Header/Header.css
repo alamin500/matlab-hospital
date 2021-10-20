@@ -17,7 +17,10 @@
   padding: 0;
 }
 .nav-text {
-  margin-right: 0 !important;
+  font-size: 25px;
+}
+.navbar-collapse {
+  width: 100%;
 }
 .logout-btn {
   text-decoration: none;
@@ -25,7 +28,20 @@
   padding: 20px 30px;
   margin: 0;
   margin-right: auto;
-  color: blue;
+  color: white;
   background-color: #212529;
   border: 0;
+}
+.hospital {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 0;
+  padding: 8px;
+  text-decoration: none;
+}
+.navbar-light {
+  padding: 0;
+}
+.navbar-expand {
+  width: 100%;
 }

@@ -18,8 +18,10 @@ import BuyNow from "./Component/Home/BuyNow/BuyNow";
 import Meet from "./Component/Home/Meet/Meet";
 import Error from "./Component/Home/Error/Error";
 import AboutUs from "./Component/Home/About us/AboutUs";
+import useFirebase from "./hooks/useFirebase";
+import BookAppointment from "./Component/Home/BookAppointment/BookAppointment";
 function App() {
-  const user = useAuth();
+  const user = useFirebase();
   console.log(user);
   return (
     <div className="App">
@@ -46,6 +48,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
+            <PrivateRoute path="/home">
+              <Home></Home>
+            </PrivateRoute>
             <PrivateRoute path="/meet">
               <Meet></Meet>
             </PrivateRoute>
@@ -55,7 +60,9 @@ function App() {
             <Route path="/about">
               <AboutUs></AboutUs>
             </Route>
-
+            <Route path="/book/:serviceId">
+              <BookAppointment></BookAppointment>
+            </Route>
             <Route to="*">
               <Error></Error>
             </Route>

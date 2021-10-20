@@ -1,8 +1,8 @@
 import React from "react";
-
+import "./Meet.css";
 const Meet = () => {
   return (
-    <div>
+    <div className="meet-section">
       <h1>Meet Confirm.</h1>
     </div>
   );

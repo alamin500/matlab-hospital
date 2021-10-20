@@ -2,7 +2,6 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   sendEmailVerification,
-  signInWithEmailAndPassword,
   updateProfile,
 } from "@firebase/auth";
 import Button from "@restart/ui/esm/Button";
@@ -48,7 +47,7 @@ const Register = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        console.log(user.displayName);
         setError("");
         verifyEmail();
         setUserName();

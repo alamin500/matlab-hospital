@@ -10,10 +10,11 @@ const Services = (props) => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   });
+
   return (
-    <div className="container">
+    <div className="container ">
       <div className="row g-5">
-        <h1 className="service-h1 pt-5" style={{ textAlign: "center" }}>
+        <h1 className="service-h1 p-3 pt-5" style={{ textAlign: "center" }}>
           Our Services
         </h1>
         {services.map((service, i) =>

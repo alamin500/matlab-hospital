@@ -28,3 +28,21 @@
 .about-text div {
   padding: 20px;
 }
+@media only screen and (max-width: 600px) {
+  .about-text {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .about-section {
+    flex-wrap: wrap;
+  }
+  .about-image {
+    height: 100% !important;
+  }
+  #root {
+    overflow-x: hidden;
+  }
+  .about-count {
+    width: 50%;
+  }
+}
