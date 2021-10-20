@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./Service.css";
-
 const Service = ({ services }) => {
   const { id, img, service, catagory } = services;
   return (

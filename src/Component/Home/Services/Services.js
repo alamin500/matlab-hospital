@@ -10,7 +10,6 @@ const Services = (props) => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   });
-
   return (
     <div className="container ">
       <div className="row g-5">

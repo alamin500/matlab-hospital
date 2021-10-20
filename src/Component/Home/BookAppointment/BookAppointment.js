@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../../Context/AuthProvider";
 import useAuth from "../../../hooks/useAuth";
 const services = [
   {

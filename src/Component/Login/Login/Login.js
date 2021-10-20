@@ -10,16 +10,13 @@ const Login = ({ show, setShow }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
   const location = useLocation();
-
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-
   const handleRegistration = (e) => {
     e.preventDefault();
     console.log(email, password);
@@ -73,7 +70,6 @@ const Login = ({ show, setShow }) => {
             aria-label="Password"
             aria-describedby="basic-addon1"
           />
-
           <br />
           <p>{error}</p>
           <Button

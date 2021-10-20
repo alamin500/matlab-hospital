@@ -72,7 +72,6 @@ const Register = () => {
             required
           />
           <br />
-
           <input
             type="email"
             onBlur={handleEmailChange}
@@ -82,7 +81,6 @@ const Register = () => {
             aria-describedby="basic-addon1"
             required
           />
-
           <br />
           <input
             type="password"
@@ -93,7 +91,6 @@ const Register = () => {
             aria-describedby="basic-addon1"
             required
           />
-
           <p>{error}</p>
           <Button
             type="submit"

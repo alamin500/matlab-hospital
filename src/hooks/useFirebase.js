@@ -13,9 +13,7 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
   const auth = getAuth();
-
   const googleSignIn = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
